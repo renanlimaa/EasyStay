@@ -53,7 +53,7 @@ List<Pessoa> hospedes = new List<Pessoa>
 // Criação de suíte
 Suite suite = new Suite(tipoSuite: "Premium", capacidade: 2, valorDiaria: 250);
 
-// Criação de reserva
+// Cria uma nova reserva
 Reserva reserva = new Reserva(diasReservados: 8);
 reserva.CadastrarSuite(suite);
 reserva.CadastrarHospedes(hospedes);
@@ -63,7 +63,7 @@ Console.WriteLine($"Suíte: {suite.TipoSuite}");
 Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
 Console.WriteLine($"Valor Total: R$ {reserva.CalcularValorDiaria():F2}");
 
-// Geração do recibo
+// Geração do recibo para o usuário
 GerarRecibo(reserva);
 ```
 
